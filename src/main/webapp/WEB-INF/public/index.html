@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="http://localhost:63342/zimbra-demo/src/main/webapp/WEB-INF/css/login.css">
+</head>
+<body>
+<div class="LoginScreen LoginScreenImage">
+    <h1><a href="#" id="bannerLink" target="_new" title='Zimbra'><span class="ScreenReaderOnly">Zimbra</span>
+        <span class="ImgLoginBanner"></span>
+    </a></h1>
+    <div class="center">
+        <div class="LoginBox">
+            <div id="ZLoginAppName">武汉佰钧成技术有限责任公司邮件系统</div>
+            <form method="post" name="loginForm" action="/" accept-charset="UTF-8">
+                <input type="hidden" name="loginOp" value="login"/>
+                <input type="hidden" name="login_csrf" value="d508f3eb-7a55-477d-be27-b16156f72774"/>
+
+                <table class="LoginBoxForm">
+                    <tr>
+                        <td colspan="2"><label class="LoginTr LoginTile">邮箱登录</label></td>
+                    </tr>
+                    <tr>
+                        <!--<td><label for="username">用户名:</label></td>-->
+                        <td colspan="2">
+                            <div style="position:relative;">
+                                <div style="width:20px;height:20px;position:absolute;background:#000;left:10px;top:10px;"></div>
+                                <input placeholder="用户名" id="username" class="zLoginField input_login" name="username" type="text" value="" size="40" maxlength="1024" autocapitalize="off" autocorrect="off"/>
+
+                            </div>
+                            </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <!--<td><label for="password">密码:</label></td>-->
+                        <td colspan="2">
+                            <div style="position:relative;">
+                                <div style="width:30px;height:30px;position:absolute;left:5px;top:5px;">
+                                    <img src="../img/ico-password.png" width="100%" height="100%" />
+                                </div>
+                                <input id="password" autocomplete="off" class="zLoginField input_login" name="password" type="password" value="" size="40" maxlength="1024"/>
+
+                            </div>
+                            </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="submitTD">
+                            <input id="remember" value="1" type="checkbox" name="zrememberme" />
+                            <label for="remember">记住我</label>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="submit" class="LoginSubmit" value="登录" /></td>
+                    </tr>
+
+                    <tr >
+                        <td colspan="2"><hr/></td>
+                    </tr>
+                    <tr >
+                        <td>
+                            <label for="client">版本：</label>
+                        </td>
+                        <td>
+                            <div class="positioning">
+                                <select id="client" name="client" onchange="clientChange(this.options[this.selectedIndex].value)">
+                                    <option value="preferred" selected > 默认</option>
+                                    <option value="advanced" > 高级 (Ajax)</option>
+                                    <option value="standard" > 标准 (HTML)</option>
+                                    <option value="mobile" > 手机</option>
+                                </select>
+                                <script TYPE="text/javascript">
+                                    document.write("<a style='color:#007CC3' href='#' onclick='showWhatsThis();' id='ZLoginWhatsThisAnchor' aria-controls='ZLoginWhatsThis' aria-expanded='false'>这是什么？</a>");
+                                </script>
+                                <div id="ZLoginWhatsThis" class="ZLoginInfoMessage" style="display:none;" onclick='showWhatsThis();' role="tooltip"><h3 style="text-align:center;">客户端类型：</h3>	<b>高级</b> - 提供全套 Web 协同功能。该 Web 客户端最适合使用新版浏览器和更快的 Internet 连接。 <br><br><b>标准</b> - 在 Internet 连接较慢、使用旧版浏览器，或为方便访问时，建议使用该类型。 <br><br><b>移动</b> - 移动设备建议使用该类型。 <br><br>要将首选的客户端类型设为<b>默认</b>，请在登录后前往“首选项”->“常规”选项卡更改选项中的符号。</div>
+                                <div id="ZLoginUnsupported" class="ZLoginInfoMessage" style="display:none;">请注意，所用浏流览器或显示器不能全面支持高级版本。  建议您使用标准版的客户端。</div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div class="decor1"></div>
+    </div>
+
+    <div class="Footer">
+        <div id="ZLoginNotice" class="legalNotice-small">地址：湖北省武汉市东湖高新区光谷软件园F1栋12层、13层　电话：027-87776668</div>
+        <div class="copyright">
+            Copyright © bill-jc.com All rights reserved.</div>
+    </div>
+    <div class="decor2"></div>
+</div>
+</body>
+</html>
