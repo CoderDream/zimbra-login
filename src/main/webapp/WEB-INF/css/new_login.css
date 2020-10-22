@@ -1,0 +1,74 @@
+.LoginScreenImage {
+    background: url("@AppContextPath@/img/bg.png?v=200921102125") no-repeat top left !important;
+    background-size: cover !important;
+}
+
+.LoginBox {
+    width: 440px;
+    height: 416px;
+    background: #FFFFFF;
+    border-radius: 5px;
+}
+
+.LoginBoxForm {
+    border-collapse: collapse;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 14px;
+}
+
+.LoginTr {
+    background: #FFFFFF;
+    border-radius: 2px;
+}
+
+.LoginTile {
+    font-size: 24px;
+    line-height: 36px;
+    color: #000;
+    font-weight: bold;
+    display: block;
+    padding: 20px 0;
+}
+
+.input_login {
+    width: 95%;
+    height: 36px !important;
+    line-height: 36px !important;
+    text-indent: 40px;
+}
+
+.LoginSubmit {
+    width: 98%;
+    height: 42px;
+    background: #007CC3;
+    border-radius: 3px;
+    font-size: 16px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: #FFFFFF;
+    line-height: 36px;
+}
+
+.LoginScreen .center, .LoginScreen .center-small, .SplashScreen .center, .SplashScreen .center-small, .ErrorScreen .center, .ErrorScreen .center-small {
+    left: 82%;
+    overflow: visible;
+    position: absolute;
+    top: 30%;
+    z-index: 11;
+}
+
+.Icon_Username {
+    width:20px;height:20px;position:absolute;left:10px;top:10px;
+    background: url("@AppContextPath@/img/ico-user.png") no-repeat 100%;
+}
+
+
+.Icon_Password {
+    width:20px;height:20px;position:absolute;left:10px;top:10px;
+    background: url("@AppContextPath@/img/ico-password.png") no-repeat 100%;
+}
+
+#remember {
+    vertical-align: middle;
+}
