@@ -1,12 +1,14 @@
-.LoginScreenImage {
+.flex-box-2 {
     background: url("@AppContextPath@/img/bg.png?v=200921102125") no-repeat top left !important;
+    /*background: url("http://localhost:63342/zimbra-login/src/main/webapp/WEB-INF/img/bg.png?v=200921102125") no-repeat top left !important;*/
     background-size: cover !important;
 }
 
 .LoginBox {
     width: 440px;
-    height: 416px;
-    background: #FFFFFF;
+    height: 360px;
+    background: #FFFFFF !important;
+    background-color: #FFFFFF !important;
     border-radius: 5px;
 }
 
@@ -32,10 +34,21 @@
 }
 
 .input_login {
-    width: 95%;
-    height: 36px !important;
-    line-height: 36px !important;
-    text-indent: 40px;
+    /*width: 95%;*/
+    /*height: 36px !important;*/
+    /*line-height: 36px !important;*/
+    /*text-indent: 40px;*/
+    width: 368px;
+    height: 42px;
+    background: #FFFFFF;
+    border: 1px solid #D6D6D6;
+    border-radius: 3px;
+
+    font-size: 14px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: #494949;
+    line-height: 36px;
 }
 
 .LoginSubmit {
@@ -59,16 +72,108 @@
 }
 
 .Icon_Username {
-    width:20px;height:20px;position:absolute;left:10px;top:10px;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 5px;
+    top: 5px;
     background: url("@AppContextPath@/img/ico-user.png") no-repeat 100%;
 }
 
 
 .Icon_Password {
-    width:20px;height:20px;position:absolute;left:10px;top:10px;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 5px;
+    top: 5px;
     background: url("@AppContextPath@/img/ico-password.png") no-repeat 100%;
 }
 
 #remember {
     vertical-align: middle;
+}
+
+.LoginScreen #ZLoginWhatsThisAnchor {
+    font-size: 14px !important;
+    font-family: Microsoft YaHei !important;
+    font-weight: 400 !important;
+    color: #007CC3 !important;
+    line-height: 36px !important;
+}
+
+
+
+.center-small .LoginBox{
+    width:100%;height:auto;overflow:hidden;padding:0;
+}
+.LoginScreenImage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.LoginScreen .center-small, .SplashScreen .center-small, .ErrorScreen .center-small {
+    left: 0;margin:0;
+    overflow: visible;
+    position: static;
+    top: 0;
+    z-index: 11;
+    width:260px;height:318px;padding:20px;background:#fff;
+}
+.center-small .LoginBoxForm{
+    width:100%;
+}
+.center-small .input_login{
+    width: 252px;
+}
+.center-small .LoginSubmit{
+    width:100%;border:none;
+}
+.ImgLoginBanner{
+    /*background:url('http://localhost:63342/zimbra-login/src/main/webapp/WEB-INF/img/BILL-JC@2X.PNG') no-repeat 10px center;*/
+
+    background:url('@AppContextPath@/img/BILL-JC@2x.png') no-repeat 10px center;
+
+    display:block;
+    background-size:186px;
+    width:100%;height:50px;
+}
+.LoginScreen, .SplashScreen, .ErrorScreen{
+    position:relative;
+}
+h1{
+    margin:0;
+}
+
+.flex-box{
+    width:100%;height:100%;display:flex;flex-direction: column;
+}
+.flex-box-1{
+    height:50px;
+}
+.flex-box-2{
+    flex:1;
+}
+.flex-box-3{
+    height:60px;text-align:center;padding:20px 0;line-height:20px;
+}
+
+.Footer-small #ZLoginNotice{
+    display:block;
+}
+.legalNotice-small{
+    padding:0 20px;
+}
+.center-small .LoginTile{
+    padding-top:0;padding-bottom:10px;font-size:16px;
+}
+.LoginSubmit {
+    -webkit-appearance : none ;/*解决ios上按钮的圆角问题*/
+    border-radius: 0;/*解决ios上输入框圆角问题*/
+}
+.version_margintop{
+    height:60px;
+}
+.center-small .version_margintop{
+    height:20px;
 }

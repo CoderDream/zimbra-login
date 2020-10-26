@@ -530,7 +530,7 @@ Since now almost everything is relative to one of the 2 absolute font size class
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
     <title><fmt:message key="zimbraLoginTitle"/></title>
     <c:set var="version" value="${initParam.zimbraCacheBusterVersion}"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="<fmt:message key="zimbraLoginMetaDesc"/>">
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
@@ -555,12 +555,16 @@ Since now almost everything is relative to one of the 2 absolute font size class
 </head>
 <c:set value="/img" var="iconPath" scope="request"/>
 <body onload="onLoad();">
+<div class="flex-box">
+    <div class="flex-box-1">
+        <h1><a href="#1" id="bannerLink" target="_new" title='Zimbra'><span
+                class="ScreenReaderOnly">Zimbra</span>
+            <span class="ImgLoginBanner"></span>
+        </a></h1>
+    </div>
+    <div class="flex-box-2">
+
 <div class="LoginScreen LoginScreenImage">
-    <h1><a href="#" id="bannerLink" target="_new"
-           title='<fmt:message key="zimbraTitle"/>'><span
-            class="ScreenReaderOnly"><fmt:message key="zimbraTitle"/></span>
-        <span class="Img${smallScreen?'App':'Login'}Banner"></span>
-    </a></h1>
     <div class="${smallScreen?'center-small':'center'}">
         <div class="contentBox LoginBox">
 
@@ -679,7 +683,7 @@ Since now almost everything is relative to one of the 2 absolute font size class
                                                 <tr>
                                                     <td colspan="2">
                                                         <div style="position:relative;">
-                                                            <div class="Icon_Password">
+                                                            <div class="Icon_Username">
                                                             </div>
                                                             <input placeholder="用户名" id="username"
                                                                class="zLoginField input_login"
@@ -702,13 +706,11 @@ Since now almost everything is relative to one of the 2 absolute font size class
                                         <tr>
                                             <td colspan="2">
                                                 <div style="position:relative;">
-                                                    <div style="width:30px;height:30px;position:absolute;left:5px;top:5px;">
-                                                        <img src="../img/ico-password.png"
-                                                             width="100%" height="100%"/>
+                                                    <div class="Icon_Password">
                                                     </div>
                                                     <input placeholder="密码" id="password"
                                                        autocomplete="off"
-                                                       class="zLoginField"
+                                                       class="zLoginField input_login"
                                                        name="password"
                                                        type="password" value=""
                                                        size="40"
@@ -779,22 +781,19 @@ Since now almost everything is relative to one of the 2 absolute font size class
                                                 </c:if>
                                             </td>
                                         </tr>
+                                        <tr>
+                                            <td colspan="2">&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">&nbsp;</td>
+                                        </tr>
 
                                         <tr>
                                             <td colspan="2"><input type="submit" class="LoginSubmit"
                                                                    value="登录"/></td>
                                         </tr>
                                         <tr>
-                                            <td colspan="2">&nbsp;</td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="2">&nbsp;</td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="2">&nbsp;</td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="2">&nbsp;</td>
+                                            <td colspan="2" class="version_margintop">&nbsp;</td>
                                         </tr>
 
                                         <c:if test="${domainInfo.attrs.zimbraFeatureResetPasswordStatus eq 'enabled'}">
@@ -816,7 +815,6 @@ Since now almost everything is relative to one of the 2 absolute font size class
                                     <tr
                                             <c:if test="${client eq 'socialfox'}">style='display:none;'</c:if>>
                                         <td colspan="2">
-                                            <hr/>
                                         </td>
                                     </tr>
                                     <tr
@@ -908,21 +906,26 @@ Since now almost everything is relative to one of the 2 absolute font size class
         <div class="decor1"></div>
     </div>
 
-    <div class="${smallScreen?'Footer-small':'Footer'}">
-        <div id="ZLoginNotice" class="legalNotice-small"><fmt:message
-                key="clientLoginNotice"/></div>
-        <div class="copyright">
-            <c:choose>
-                <c:when test="${mobileSupported}">
-                    <fmt:message bundle="${zhmsg}" key="splashScreenCopyright"/>
-                </c:when>
-                <c:otherwise>
-                    <fmt:message key="splashScreenCopyright"/>
-                </c:otherwise>
-            </c:choose>
+    <div class="decor2"></div>
+</div>
+
+    </div>
+    <div class="flex-box-3">
+        <div class="${smallScreen?'Footer-small':'Footer'}">
+            <div id="ZLoginNotice" class="legalNotice-small"><fmt:message
+                    key="clientLoginNotice"/></div>
+            <div class="copyright">
+                <c:choose>
+                    <c:when test="${mobileSupported}">
+                        <fmt:message bundle="${zhmsg}" key="splashScreenCopyright"/>
+                    </c:when>
+                    <c:otherwise>
+                        <fmt:message key="splashScreenCopyright"/>
+                    </c:otherwise>
+                </c:choose>
+            </div>
         </div>
     </div>
-    <div class="decor2"></div>
 </div>
 <script>
 
